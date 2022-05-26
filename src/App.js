@@ -1,15 +1,13 @@
 import "./App.css";
-import MyCardSet from "./components/MyCardSetComponent";
 import {BrowserRouter, Route, Switch } from "react-router-dom";
-import HeaderComponent from "./components/HeaderComponent";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
     return (
-    <BrowserRouter>
       <div className="App">
-        <MyCardSet />
-      </div>);
-    </BrowserRouter>
-}
+        <LoginPage/>
+      </div>
+    );
+  }
 
 export default App;
