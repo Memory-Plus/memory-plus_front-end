@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
-import Login from '../components/login/Login';
+import Header from '../components/layout/HeaderCom';
+import Footer from '../components/layout/FooterCom';
+import Login from '../components/login/LoginCom';
 
-const LoginPage = () => {
+const LoginPage = (props) => {
+  console.log('LoginPage'.props);
   return (
     <div>
-      <Header/>
+      <button onClick={()=>props.history.push("/")}>뒤로가기</button>
       <Login/>
-      <Footer/>
     </div>
   );
 };
