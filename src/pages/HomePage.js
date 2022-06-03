@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Home from '../components/home/Home';
-import Footer from '../components/layout/Footer';
-import Header from '../components/layout/Header';
+import Home from '../components/home/HomeCom';
+import Footer from '../components/layout/FooterCom';
+import Header from '../components/layout/HeaderCom';
 
 const HomePage = () => {
 
@@ -27,9 +27,7 @@ const HomePage = () => {
 
     return (
         <div>
-          <Header />
           <Home boards={boards} setBoards={setBoards} user={user}/>
-          <Footer />
         </div>
     );
 };
