@@ -1,29 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import CardCom from '../components/cardSet/CardCom';
 
+import dummy from "../db/data.json";
+
 const CardSetDetailPage = () => {
-  // const cardSetId = props.match.param.cardSetId;
+
+  const {cardSetId} = useParams();
   const[cardSet, setCardSet] = useState([]); 
   const [cardDetail, setCardDetail] = useState([]);
+  const FilteredCardSet = dummy.cardSet.filter(card => card.id === Number(cardSetId));
+  // cardSetId는 string으로 받아옴
+  const FilteredCardList = dummy.cardList.filter(card => card.cardSetId === Number(cardSetId));
 
   useEffect(()=> {
-    let data = [{
-      id:1,
-      cardSetTitle:"영어단어이름",
-      cardSetCreator:"모리",
-      cardSetCategories:"영어",
-      cardList:[
-        {cardId:1, cardTitle:"apple", cardContent:"사과"},
-        {cardId:2, cardTitle:"Orange", cardContent:"오렌지"},
-        {cardId:3, cardTitle:"Grape", cardContent:"포도"},
-        {cardId:4, cardTitle:"Eggplant", cardContent:"가지"},
-      ]
-    }];
-    
-    setCardSet([...data]);
-    setCardDetail([...data[0].cardList]);
+    setCardSet([...FilteredCardSet]);
+    setCardDetail([...FilteredCardList]);
   }, [])
-
 
   return (
       <div>
@@ -35,6 +28,13 @@ const CardSetDetailPage = () => {
             <h2>카드셋 카테고리는 {cardSet.cardSetCategories} 입니다.</h2>
           </div>
         ))}
+        <form>
+          <div>
+            <label>cardTitle</label>
+            <input type="text" placeholder='카드타이틀' />
+          </div>
+        </form>
+          
         <button>추가하기</button>
 
         {cardDetail.map((cardList)=>(

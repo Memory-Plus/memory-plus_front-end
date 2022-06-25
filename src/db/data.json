@@ -1,0 +1,90 @@
+{
+  "cardSet": [
+    {
+      "id": 1,
+      "cardSetCreator": "모리",
+      "cardSetTitle": "과일 단어 이름1",
+      "cardSetCategories": "프로그래밍"
+    },
+    {
+      "id": 2,
+      "cardSetCreator": "모리",
+      "cardSetTitle": "과일 단어 이름2",
+      "cardSetCategories": "프로그래밍"
+    },
+    {
+      "id": 3,
+      "cardSetCreator": "모리",
+      "cardSetTitle": "과일 단어 이름3",
+      "cardSetCategories": "프로그래밍"
+    },
+    {
+      "id": 4,
+      "cardSetCreator": "메에",
+      "cardSetTitle": "과일 단어 이름4",
+      "cardSetCategories": "프로그래밍"
+    },
+    {
+      "id": 5,
+      "cardSetCreator": "메에",
+      "cardSetTitle": "과일 단어 이름5",
+      "cardSetCategories": "프로그래밍"
+    },
+    {
+      "cardSetTitle": "",
+      "cardSetCategories": "",
+      "cardSetCreator": "",
+      "id": 6
+    },
+    {
+      "cardSetTitle": "",
+      "cardSetCategories": "",
+      "cardSetCreator": "",
+      "id": 7
+    }
+  ],
+  "cardList": [
+    {
+      "cardId": 1,
+      "cardSetId": 1,
+      "cardTitle": "apple",
+      "cardContent": "사과"
+    },
+    {
+      "cardId": 2,
+      "cardSetId": 1,
+      "cardTitle": "Orange",
+      "cardContent": "오렌지"
+    },
+    {
+      "cardId": 3,
+      "cardSetId": 1,
+      "cardTitle": "Grape",
+      "cardContent": "포도"
+    },
+    {
+      "cardId": 4,
+      "cardSetId": 2,
+      "cardTitle": "Eggplant",
+      "cardContent": "가지"
+    },
+    {
+      "cardId": 5,
+      "cardSetId": 4,
+      "cardTitle": "babo",
+      "cardContent": "바보"
+    },
+    {
+      "cardId": 6,
+      "cardSetId": 4,
+      "cardTitle": "idiot",
+      "cardContent": "멍청이"
+    },
+    {
+      "cardId": 7,
+      "cardSetId": 4,
+      "cardTitle": "DDongGay",
+      "cardContent": "똥개"
+    }
+  ]
+}
