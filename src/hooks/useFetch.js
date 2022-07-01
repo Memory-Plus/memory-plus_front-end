@@ -6,7 +6,7 @@ export default function useFetch(url) {
   useEffect(() => {
     fetch(url)
     .then(res => {
-      return res.json();
+      return res.json(); // json으로 변환
     })
     .then(data => {
       setData(data);
