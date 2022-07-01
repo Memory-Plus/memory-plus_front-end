@@ -12,7 +12,7 @@ const MyCardSet = () => {
     setIsVisible(isVisible => !isVisible); //on off boolean
   };
 
-  const cardSet = useFetch(`http://localhost:3001/cardSet`);
+  const cardSet = useFetch(`http://localhost:3001/cardSet`); //카드셋을 받아옴
 
   return (
       <div>

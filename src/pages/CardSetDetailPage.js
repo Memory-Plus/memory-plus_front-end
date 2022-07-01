@@ -3,20 +3,23 @@ import { useParams } from 'react-router-dom';
 import CardCom from '../components/cardSet/CardCom';
 
 import dummy from "../db/data.json";
+import useFetch from '../hooks/useFetch';
 
 const CardSetDetailPage = () => {
 
   const {cardSetId} = useParams();
-  const[cardSet, setCardSet] = useState([]); 
+  // const[cardSet, setCardSet] = useState([]); 
   const [cardDetail, setCardDetail] = useState([]);
   const FilteredCardSet = dummy.cardSet.filter(card => card.id === Number(cardSetId));
   // cardSetId는 string으로 받아옴
   const FilteredCardList = dummy.cardList.filter(card => card.cardSetId === Number(cardSetId));
 
   useEffect(()=> {
-    setCardSet([...FilteredCardSet]);
+    // setCardSet([...FilteredCardSet]);
     setCardDetail([...FilteredCardList]);
   }, [])
+
+  cardSet = useFetch(`http://localhost:3001/cardSet?cardSetId=${id}`)
 
   return (
       <div>

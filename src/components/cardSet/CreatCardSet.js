@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const CreatCardSet = () => {
   useEffect(() => {
-    axios.post(`http://localhost:3001/cardSet`, {
+    axios.get(`http://localhost:3001/cardSet`, {
       cardSetTitle: cardSetTitleRef.current.value,
       cardSetCategories: cardSetCategoriesRef.current.value,
       cardSetCreator: cardSetCreatorRef.current.value
