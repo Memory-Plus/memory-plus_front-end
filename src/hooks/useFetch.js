@@ -14,4 +14,5 @@ export default function useFetch(url) {
   }, [url]);
 
   return data;
+  
 }
