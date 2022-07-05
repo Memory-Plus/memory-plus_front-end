@@ -15,8 +15,7 @@ const Home = (props) => {
 
   return (
       <div>
-        <Link to={"/mylist"}>추가하기</Link>
-        <Link to={"/list"}>퀴즈보기</Link>
+        <h1>홈입니다.</h1>
       </div>
   );
 };

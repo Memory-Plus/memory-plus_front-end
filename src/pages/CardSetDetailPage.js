@@ -10,7 +10,7 @@ const CardSetDetailPage = () => {
   const {cardSetId} = useParams();
   // const[cardSet, setCardSet] = useState([]); 
   const [cardDetail, setCardDetail] = useState([]);
-  const FilteredCardSet = dummy.cardSet.filter(card => card.id === Number(cardSetId));
+  // const FilteredCardSet = dummy.cardSet.filter(card => card.id === Number(cardSetId));
   // cardSetId는 string으로 받아옴
   const FilteredCardList = dummy.cardList.filter(card => card.cardSetId === Number(cardSetId));
 
@@ -19,18 +19,20 @@ const CardSetDetailPage = () => {
     setCardDetail([...FilteredCardList]);
   }, [])
 
-  cardSet = useFetch(`http://localhost:3001/cardSet?cardSetId=${id}`)
+  
+  const cardSet = useFetch(`http://localhost:3001/cardSet?cardSetId=${cardSetId}`)
 
   return (
       <div>
         <h1> 카드셋 상세페이지 입니다.</h1>
         {cardSet.map((cardSet)=>(
-          <div key={cardSet.id}>
+          <div>
             <h2>카드셋 아이디는 {cardSet.id} 입니다.</h2>
             <h2>카드셋 이름은 {cardSet.cardSetTitle} 입니다.</h2>
             <h2>카드셋 카테고리는 {cardSet.cardSetCategories} 입니다.</h2>
           </div>
         ))}
+        <h2> 카드셋 아이디는 {cardSetId} 입니다.</h2>
         <form>
           <div>
             <label>cardTitle</label>

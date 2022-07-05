@@ -5,7 +5,7 @@ const LoginPage = (props) => {
   console.log('LoginPage'.props);
   return (
     <div>
-      <button onClick={()=>props.history.push("/")}>뒤로가기</button>
+      <button>뒤로가기</button>
       <Login/>
     </div>
   );
